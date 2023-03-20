@@ -37,11 +37,32 @@ void merge_sort_test() {
             cout << arr[i] << "]";
         }
     }
+    cout << endl;
 }
+
+void shell_sort_test() {
+    cout << "shell sort:" << endl;
+    int arr[] = { 16, 7, 2, 9, 5, 3 };
+    int n = sizeof(arr) / sizeof(int);
+    shell_sort(arr, n);
+    cout << "[";
+    for (int i = 0; i < n; i++) {
+        if (i != n - 1) {
+            cout << arr[i] << ", ";
+        }
+
+        else {
+            cout << arr[i] << "]";
+        }
+    }
+    cout << endl;
+}
+
 int main()
 {
     selection_sort_test();
     merge_sort_test();
+    shell_sort_test();
     //std::cout << "Hello World!\n";
 }
 
